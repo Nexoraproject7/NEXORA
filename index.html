@@ -1,16 +1,185 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Nexora Web</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #070b16;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1c2540;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #5ee7df;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #aab4c8;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 10px;
+      background: #5ee7df;
+      color: #061016;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+      text-align: center;
+      border-top: 1px solid #151d32;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      color: #aab4c8;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #69758d;
+      border-top: 1px solid #151d32;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Witaj w Nexora Web</h1>
-  <p>To jest pierwsza wersja naszego projektu.</p>
 
-  <h2>Nexora — technologia przyszłości</h2>
-  <p>Budujemy nowoczesny projekt krok po kroku.</p>
+  <header>
+    <div class="logo">NEXORA</div>
+
+    <nav>
+      <a href="#about">O projekcie</a>
+      <a href="#token">Token</a>
+      <a href="#roadmap">Roadmapa</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Witaj w <span>Nexora</span></h1>
+
+      <p>
+        Budujemy nowoczesny projekt technologiczny,
+        który łączy społeczność, cyfrowe usługi
+        i gospodarkę opartą na tokenie.
+      </p>
+
+      <a class="button" href="#about">Poznaj projekt</a>
+    </section>
+
+    <section id="about">
+      <h2>Czym jest Nexora?</h2>
+
+      <p>
+        Nexora to projekt tworzony krok po kroku.
+        Naszym celem jest stworzenie przejrzystego
+        ekosystemu, w którym technologia i społeczność
+        współpracują ze sobą.
+      </p>
+    </section>
+
+    <section id="token">
+      <h2>Token Nexora</h2>
+
+      <p>
+        W przyszłości token będzie jednym z elementów
+        ekosystemu Nexora. Szczegóły dotyczące nazwy,
+        podaży i zastosowania tokena opracujemy
+        w kolejnych etapach projektu.
+      </p>
+    </section>
+
+    <section id="roadmap">
+      <h2>Roadmapa</h2>
+
+      <p>
+        Etap 1 — stworzenie projektu i strony.<br>
+        Etap 2 — budowa społeczności.<br>
+        Etap 3 — opracowanie tokenomii.<br>
+        Etap 4 — rozwój ekosystemu Nexora.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Nexora Web — Projekt w budowie
+  </footer>
+
 </body>
 </html>
