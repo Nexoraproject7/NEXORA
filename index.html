@@ -383,16 +383,39 @@ w jeden rozwijający się projekt.
 </style>
 <script src="ai.js"></script>
 <script>
-  function askNexora() {
-    const input = document.getElementById("aiInput");
-    const response = document.getElementById("aiResponse");
+  async function askNexora() {
+  const input = document.getElementById("aiInput");
+  const response = document.getElementById("aiResponse");
 
-    if (input.value.trim() === "") {
-      response.textContent = "Napisz wiadomość, a Nexora odpowie.";
-      return;
-    }
+  const message = input.value.trim();
 
-    response.textContent =
-      "Nexora AI otrzymała Twoją wiadomość: " + input.value;
+  if (!message) {
+    response.textContent = "Napisz wiadomość, a Nexora odpowie.";
+    return;
   }
+
+  response.textContent = "Nexora myśli...";
+
+  try {
+    const result = await fetch(
+      "https://nexora.nexoraproject7.workers.dev",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          message: message
+        })
+      }
+    );
+
+    const data = await result.json();
+
+    response.textContent = data.reply || "Nexora nie zwróciła odpowiedzi.";
+  } catch (error) {
+    response.textContent =
+      "Nie udało się połączyć z Nexora AI.";
+  }
+}
 </script>
