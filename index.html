@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nexora Web</title>
+  <title>Nexora — Technologia przyszłości</title>
 
   <style>
     * {
@@ -16,7 +14,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #070b16;
+      background: #080b16;
       color: white;
       line-height: 1.6;
     }
@@ -26,60 +24,56 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #1c2540;
+      border-bottom: 1px solid #202640;
     }
 
     .logo {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: bold;
+      color: #6c7cff;
     }
 
     nav a {
-      color: #cbd5e1;
+      color: white;
       text-decoration: none;
       margin-left: 20px;
     }
 
     .hero {
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 90px 20px;
     }
 
     .hero h1 {
-      font-size: 56px;
+      font-size: 52px;
       margin-bottom: 20px;
     }
 
-    .hero h1 span {
-      color: #5ee7df;
+    .hero span {
+      color: #6c7cff;
     }
 
     .hero p {
       max-width: 650px;
-      color: #aab4c8;
-      font-size: 19px;
-      margin-bottom: 35px;
+      margin: auto;
+      color: #b8bfd6;
+      font-size: 18px;
     }
 
     .button {
       display: inline-block;
+      margin-top: 30px;
       padding: 14px 28px;
-      border-radius: 10px;
-      background: #5ee7df;
-      color: #061016;
+      background: #6c7cff;
+      color: white;
       text-decoration: none;
+      border-radius: 10px;
       font-weight: bold;
     }
 
     section {
       padding: 70px 8%;
       text-align: center;
-      border-top: 1px solid #151d32;
     }
 
     section h2 {
@@ -88,30 +82,35 @@
     }
 
     section p {
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
-      color: #aab4c8;
+      color: #b8bfd6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #11162a;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #252d4a;
+    }
+
+    .card h3 {
+      color: #6c7cff;
+      margin-bottom: 10px;
     }
 
     footer {
-      padding: 30px;
       text-align: center;
-      color: #69758d;
-      border-top: 1px solid #151d32;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        padding: 20px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
+      padding: 30px;
+      border-top: 1px solid #202640;
+      color: #8e96b0;
     }
   </style>
 </head>
@@ -122,63 +121,90 @@
     <div class="logo">NEXORA</div>
 
     <nav>
-      <a href="#about">O projekcie</a>
+      <a href="#projekt">Projekt</a>
       <a href="#token">Token</a>
-      <a href="#roadmap">Roadmapa</a>
+      <a href="#plan">Plan</a>
     </nav>
   </header>
 
-  <main>
+  <section class="hero">
+    <h1>Witaj w <span>Nexora</span></h1>
 
-    <section class="hero">
-      <h1>Witaj w <span>Nexora</span></h1>
+    <p>
+      Nexora to projekt technologiczny budowany krok po kroku.
+      Naszym celem jest stworzenie nowoczesnego ekosystemu
+      łączącego technologię, społeczność i rozwiązania blockchain.
+    </p>
 
-      <p>
-        Budujemy nowoczesny projekt technologiczny,
-        który łączy społeczność, cyfrowe usługi
-        i gospodarkę opartą na tokenie.
-      </p>
+    <a href="#projekt" class="button">Poznaj Nexora</a>
+  </section>
 
-      <a class="button" href="#about">Poznaj projekt</a>
-    </section>
+  <section id="projekt">
+    <h2>O projekcie</h2>
 
-    <section id="about">
-      <h2>Czym jest Nexora?</h2>
+    <p>
+      Nexora jest rozwijana jako długoterminowy projekt technologiczny.
+      Zaczynamy od podstaw i będziemy stopniowo dodawać kolejne funkcje,
+      produkty oraz elementy ekosystemu.
+    </p>
+  </section>
 
-      <p>
-        Nexora to projekt tworzony krok po kroku.
-        Naszym celem jest stworzenie przejrzystego
-        ekosystemu, w którym technologia i społeczność
-        współpracują ze sobą.
-      </p>
-    </section>
+  <section id="token">
+    <h2>Token NXR</h2>
 
-    <section id="token">
-      <h2>Token Nexora</h2>
+    <div class="cards">
 
-      <p>
-        W przyszłości token będzie jednym z elementów
-        ekosystemu Nexora. Szczegóły dotyczące nazwy,
-        podaży i zastosowania tokena opracujemy
-        w kolejnych etapach projektu.
-      </p>
-    </section>
+      <div class="card">
+        <h3>NXR</h3>
+        <p>
+          Natywny token ekosystemu Nexora.
+        </p>
+      </div>
 
-    <section id="roadmap">
-      <h2>Roadmapa</h2>
+      <div class="card">
+        <h3>Ekosystem</h3>
+        <p>
+          Token będzie w przyszłości wykorzystywany
+          w wybranych funkcjach projektu.
+        </p>
+      </div>
 
-      <p>
-        Etap 1 — stworzenie projektu i strony.<br>
-        Etap 2 — budowa społeczności.<br>
-        Etap 3 — opracowanie tokenomii.<br>
-        Etap 4 — rozwój ekosystemu Nexora.
-      </p>
-    </section>
+      <div class="card">
+        <h3>Społeczność</h3>
+        <p>
+          Rozwój Nexora będzie opierał się również
+          na aktywnej społeczności projektu.
+        </p>
+      </div>
 
-  </main>
+    </div>
+  </section>
+
+  <section id="plan">
+    <h2>Plan rozwoju</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Etap 1</h3>
+        <p>Strona internetowa i podstawy projektu.</p>
+      </div>
+
+      <div class="card">
+        <h3>Etap 2</h3>
+        <p>Rozbudowa ekosystemu Nexora.</p>
+      </div>
+
+      <div class="card">
+        <h3>Etap 3</h3>
+        <p>Rozwój tokena i funkcji blockchain.</p>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
-    © 2026 Nexora Web — Projekt w budowie
+    © 2026 Nexora. Projekt rozwijany krok po kroku.
   </footer>
 
 </body>
